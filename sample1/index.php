@@ -21,6 +21,17 @@ include 'routes.php';
 	<title>Library</title>
 </head>
 <body>
+  <script>
+    function bookadded() {
+      alert("Book Added");
+    }
+    function authoradded() {
+      alert("Auther Added");
+    }
+    function assign() {
+      alert("Assigned");
+    }
+  </script>
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -49,7 +60,7 @@ include 'routes.php';
   <form action="add-new-books" method="post">
     <label>Book:</label>
     <input  name="booktitle" placeholder="Enter book title"><br>
-    <button type="submit">Add new book</button>
+    <button type="submit" onclick="bookadded()">Add new book</button>
   </form>
     </div>
     <div class="container-fluid bg-2 text-center">
@@ -57,7 +68,7 @@ include 'routes.php';
     <form action="add-new-author" method="post">
       <label>Author:</label>
       <input name="name" placeholder="Name"><br>
-    <button type="submit">Add Authors</button>
+    <button type="submit" onclick="authoradded()">Add Authors</button>
   </form >
   <h1>Assign</h1>
   <form action="assign" method="post">
@@ -75,7 +86,7 @@ include 'routes.php';
       $tstobj->getbooks();
       ?>
     </select><br><br>
-    <button type="submit">Assign</button>
+    <button type="submit" onclick="assign()">Assign</button>
   </form>
 </div>
 
